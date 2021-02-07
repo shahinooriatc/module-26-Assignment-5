@@ -25,30 +25,30 @@ const displayDetails = name => {
 };
 // Each & Every Foods Info.....
 const findFoodInfo = food => {
-// Get all ingredients from the object. Up to 25
+// Get all ingredients from the objects Up to 25 item.
      const ingredients = [];
      for (let i = 1; i <= 25; i++) {
          if (food[`strIngredient${i}`]) {
              ingredients.push(`${food[`strIngredient${i}`]} - ${food[`strMeasure${i}`]}`);
          } else {
-             // Stop if there are no more ingredients
+// Stop if there are no more ingredients
              break;
          }
      }
+// Each Food Details.....
     const foodDetailsDiv = document.getElementById('foodsDetails');
     foodDetailsDiv.innerHTML = `
     <img class="img-fluid rounded mb-4" src="${food.strMealThumb}" alt="">
     <h4>${food.strMeal}</h4>
     
     <h5 class="pt-3 pb-2"><i class="icon-fire icons"></i> Ingredients</h5>
-    <ul class="list-unstyled mb-0">
-    ${ingredients.map((ingredient) => `<li><i class="icon-check icons"></i>${ingredient}</li>`).join('')}    </ul>
+    <ul class="list-unstyled mb-0">${ingredients.map((ingredient) => `<li><i class="icon-check icons"></i>${ingredient}</li>`).join('')}</ul>
 
 `;
 };
 
 function getFood(mealId) {
-    //const mainApi = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchItem.value}`;
+//MainApi = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchItem.value}`;
     const mainApi = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealId}`;
 
     fetch(mainApi)
@@ -61,8 +61,8 @@ function getFood(mealId) {
         const foodsDiv = document.getElementById('foods');
         if (foods != null) {
             foods.map(food => {
-                const foodDiv = document.createElement('div');
-                foodDiv.className = 'col-md-3';
+                const foodDiv = document.createElement('div');//make div into the food-area..
+                foodDiv.className = 'col-md-3';// 
                 const foodInfo = `
                         <div onclick="displayDetails('${food.idMeal}')" class="border rounded text-center h-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img class="img-fluid rounded-top" src="${food.strMealThumb}" alt="">
@@ -70,7 +70,7 @@ function getFood(mealId) {
                         </div>
                     `;
                 foodDiv.innerHTML = foodInfo;
-                foodsDiv.appendChild(foodDiv);
+                foodsDiv.appendChild(foodDiv);// Add food into div from API..
             });
         } else {
             warning.style.display = 'block';
