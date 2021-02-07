@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    /* transition: 0.2s; */
+    color: #e74c3c;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -------Navbar css------*/
+.nav-link:hover{
+    color: black;
+}
+
+
