@@ -42,7 +42,7 @@ const findFoodInfo = food => {
     <h4>${food.strMeal}</h4>
     
     <h5 class="pt-3 pb-2"><i class="icon-fire icons text-danger"></i> Ingredients</h5>
-    <ul class="list-unstyled mb-0">${ingredients.map((ingredient) => `<li><i class="icon-check icons text-success my-2"></i>${ingredient}</li>`).join('')}</ul>
+    <ul class="list-unstyled mb-0">${ingredients.map((ingredient) => `<li><i class="icon-check icons text-success m-2"></i>${ingredient}</li>`).join('')}</ul>
 `;
 };
 
