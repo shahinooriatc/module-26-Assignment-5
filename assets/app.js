@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 const data_container = document.getElementById('foods');
 const searchBtn = document.getElementById('searchBtn');
 const warning = document.getElementById('warning');
