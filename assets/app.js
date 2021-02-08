@@ -69,7 +69,7 @@ function getFood(mealId) {
                         </div>
                     `;
                 foodDiv.innerHTML = foodInfo;
-                foodsDiv.appendChild(foodDiv);// Add food into div from API..
+                foodsDiv.appendChild(foodDiv);// Add food into foodsdiv from API..
             });
         } else {
             warning.style.display = 'block';
